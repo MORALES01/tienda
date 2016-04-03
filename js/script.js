@@ -62,7 +62,7 @@ playList.unshift("xxxxxxx");
 
 printList(playList);*/
 
-function printList(lista) 
+/*function printList(lista) 
 {
 	var listHTML = '<ol>';
 	for (var i = 0; i < lista.length; i ++)
@@ -105,8 +105,135 @@ else
 alert("no tenemos" +busqueda+ "en nuestro almacen, no insista");
 }
 }
+}*/
+/*function printListReproduccion(listCanciones) {
+	var listHTML = '<ol>';
+	for (var i = 0; i < listCanciones.length; i += 1){	
+	listHTML += '<li>Tema:' + listCanciones[i][0] + '.Por:' + listCanciones '</li>';
+}
 }
 
+listHTML += '</ol>';
+print("listHTML");
 
+function print (html) {
+document.write(html);
+}
 
+var playList = [];
+playList.push(["aguita de cucaracha", "maximo Escalera"]);
+playList.push(["3 mujeres un camino","ddd"]);
+playList.push(["la chapa de vibra","aaa"]);
+playList.unshift(["el negrito de la salsa","www"]);	
+playList.unshift(["xxxxxxx","xxx"]);
 
+printList(playList);*/
+
+/*var preguntas = [];
+preguntas.push(["A quien dejo Jhon ayer en el almuerzo?", Richard]);
+preguntas.push(["quien es el lider de los conejitos?", Wilmer]);
+preguntas.push(["quien es el chofer oficial de los chispas", Jhon]);
+preguntas.push(["quien no programa del 2004", Fabian]);
+preguntas.push(["quien se chumo ayer",conejo]);
+preguntas.push(["quien es Eliana", SeSientaConJhon]);
+
+function imprimirRepuestas(tipoRespuestas)
+{
+	var arregloRespuestas;
+	var stringRespuestas = '';
+	if (tipoRespuestas.toLowerCase()== "correctas"|| tipoRespuestas.toLowerCase()== "incorrectas");
+    {
+	if (tipoRespuestas == "correctas")
+	        {
+		arregloRespuestas =  correctas;
+	        }else      {
+		arregloRespuestas = incorrectas;
+                       }
+if(arregloRespuestas.length<1)
+                       {
+	stringRespuestas = "no hay respuestas" + tipoRespuestas;
+                       }
+for (var i=0; i < arregloRespuestas.length; i++)
+            {
+	stringRespuestas += "<p><b>" + arregloRespuestas [i][0]+ arregloRespuestas [i][1] + "</p>";
+	// si la respuesta es incorrecta agregar las repuesta
+	if (tipoRespuestas == "incorrectas") 
+		               {
+	stringRespuestas += "<i>la respuesta correcta era:"  + arregloRespuestas[i][2] + "</i>";
+                       }
+             }
+     }else             {
+
+	alert("error, vea consola!");
+	throw new Error ("Tipo de Respuesta no aceptado");
+                       }
+	return stringRespuestas;
+}
+//imprimir todo elcuestionario, incluyendo respuesta correctas
+function imprimirCuestionario()
+{
+	html +="<h3>Respuestas correctas</h3>";
+	html += imprimirRepuestas("correctas");
+	html += '<h3 style = "color:red;">Respuestas incorrectas</h3>';
+	html += imprimirRepuestas("incorrectas");
+	return html;
+}
+function printHTML(mensaje)
+{
+	// document.write(html);
+	var outputDiv + document.getElementById("output");
+	outputDiv.innerHTML = mensaje;
+}
+var respuestas = [];
+var correctas = [];
+var incorrectas = [];
+
+//Preguntamos y procesamos las respuestas
+for(var i=0; i<preguntas.length; i++)
+{
+	var respuestaSimple;
+	do{
+		respuestaSimple = prompt("Responda: " + preguntas[i][0]);
+	}while(respuestaSimple=='')
+
+	if(isNaN(respuestaSimple))
+	{
+		respuestas.push(respuestaSimple.toLowerCase());
+	}else{
+		respuestas.push(parseInt(respuestaSimple));
+	}
+
+	if(respuestas[i]==preguntas[i][1])
+	{
+		correctas.push(preguntas[i]);
+	}else{
+		incorrectas.push([preguntas[i][0],respuestas[i],preguntas[i][1]]);
+	}
+}
+var html = "<h1>Pregunta Pregunton</h1>";
+html += "<h2>Aqui el resultado de sus respuestas</h2>"
+html += imprimirCuestionario();
+printHTML(html);*/
+
+var persona = {
+	nombre: "angel",
+	pais:"ecuador",
+	edad:32,
+	laborando: true,
+	habilidades: ["java", "c++", "php"]
+}
+;
+
+function printHTML(mensaje)
+{
+	var outputDiv =document.getElementById("output");
+	outputDiv.innerHTML=mensaje;
+}
+var saludo = "<p>hola" +persona.nombre +"bienvenido <p/>";
+saludo += "<p>como les va en:" +persona.pais +"<p/>";
+persona.nombre= "Programador Clase: Z";
+saludo += "<p>Tu usuario es:" +persona.nombre + "<p/>";
+saludo += "<p>Tu edad sera:" +(persona.edad+1)+ "<p/>";
+saludo += "<p>Tienes al momento:" +(persona.edad)+ "<p/>";
+saludo += "<p>Tushabilidades son:" +persona.habilidades.join(",")+
+printHTML(saludo);
